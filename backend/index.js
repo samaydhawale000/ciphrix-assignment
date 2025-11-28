@@ -1,16 +1,19 @@
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const { connectToDatabase } = require("./DB/connect-db");
+const { connectToDatabase } = require("./src/DB/connect-db");
+const routes = require("./src/routes");
+
 
 const port = process.env.PORT || 8080;
 
 const app = express();
-dotenv.config();
-
 // ----- middlewares ----
 app.use(cors({ origin: "*" }));
 app.use(express.json());
+dotenv.config();
+
+app.use('/v1', routes)
 
 app.get("/", (req, res) => {
     res.status(200).json({ message: "backend is live" });
