@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import { Toaster } from 'react-hot-toast';
 import './App.css';
+import RouteWrapper from './routes/RouteWrapper';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <RouteWrapper />
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+        toastOptions={{
+          duration: 5000,
+          success: {
+            style: {
+              background: "#dfffe7",
+              color: "green",
+            },
+          },
+          error: {
+            style: {
+              background: "#ffe6e6",
+              color: "red",
+            },
+          },
+        }}
+      />
     </div>
   );
 }
