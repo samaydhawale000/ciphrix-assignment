@@ -1,3 +1,16 @@
-.pageNotFoundWrapper{
-    
+.dashboard {
+  padding: 20px;
+  margin: 20px 20px 0px 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.lightDashboard{
+    background-color: #fff;
+     border: 1px solid rgb(188, 188, 188);
+}
+.darkDashboard{
+    background-color: #070830;
+     border: 1px solid rgb(150, 150, 150);
 }

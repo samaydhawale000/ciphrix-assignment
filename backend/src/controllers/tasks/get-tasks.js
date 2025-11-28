@@ -18,14 +18,14 @@ const getTasks = async (request, response) => {
             const totalRecords = await Tasks.countDocuments(filter);
             const result = await Tasks.find(filter, {})
                 .sort({ createdAt: -1 })
-                .skip((page - 1) * 25)
-                .limit(25);
+                .skip((page - 1) * 10)
+                .limit(10);
 
         if (result?.length > 0) {
             return response.status(200).json({
                 status: "SUCCESS",
                 message: "list fetched successfully",
-                totalPages:  Math.ceil(totalRecords / 25),
+                totalPages:  Math.ceil(totalRecords / 10),
                 result,
             });
         } else {

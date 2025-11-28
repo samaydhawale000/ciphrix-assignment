@@ -1,0 +1,8 @@
+.light-app{
+    background-color: #edeeff;
+    min-height: 100vh;
+}
+.dark-app{
+    background-color: #15174a;
+     min-height: 100vh;
+}

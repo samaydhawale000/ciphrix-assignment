@@ -1,10 +1,14 @@
 import { Toaster } from 'react-hot-toast';
 import './App.css';
 import RouteWrapper from './routes/RouteWrapper';
+import Navbar from './components/Navbar';
+import { useColorMode } from '@chakra-ui/color-mode';
 
 function App() {
+    const { colorMode } = useColorMode();
   return (
-    <div className="App">
+    <div className={colorMode=='light'? 'light-app' : 'dark-app'}>
+      <Navbar/>
      <RouteWrapper />
       <Toaster
         position="top-right"
