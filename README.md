@@ -7,7 +7,7 @@ Live Backend Url: https://ciphrix-assignment.vercel.app/
 ## Description  
 
 This project demonstrates a web application built using modern web technologies (primarily React).  
-It illustrates how you can structure a front-end codebase, manage state, handle UI, and integrate with APIs
+It illustrates how you can structure a front-end codebase, manage state, handle UI, and integrate with APIs. Additionally, I have shown my backend expertise
 
 ### What does it do?
 
