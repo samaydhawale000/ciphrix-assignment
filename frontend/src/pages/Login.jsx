@@ -116,7 +116,7 @@ export default function Login() {
             variant="link"
             color="blue.400"
             ml="1"
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/sign-up")}
           >
             Sign Up
           </Button>
