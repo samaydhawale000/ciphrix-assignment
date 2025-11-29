@@ -1,9 +1,7 @@
 import { Navigate } from 'react-router-dom';
 
 const ProtectedRoutes = ({ children }) => {
-
-  const tokenName = process.env.REACT_APP_PUBLIC_TOKENNAME
-  const token = sessionStorage.getItem(tokenName || "moilToken");
+  const token = localStorage.getItem( "token");
 
   if (!token) {
     return <Navigate to="/login" />;

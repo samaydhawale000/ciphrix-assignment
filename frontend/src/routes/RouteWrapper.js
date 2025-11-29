@@ -15,9 +15,9 @@ const RouteWrapper = () => {
       <Route
         path="/"
         element={
-          // <ProtectedRoutes>
+          <ProtectedRoutes>
             <Dashboard/>
-          // </ProtectedRoutes>
+          </ProtectedRoutes>
         }
       />
     </Routes>
