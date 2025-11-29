@@ -15,7 +15,23 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+.addTaskFrom{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+.paginationWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+
+
+
+/* ---------------Media query ------------ */
 @media (max-width: 756px) {
   .DashboardComponent h2 {
     font-size: 20px;

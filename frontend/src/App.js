@@ -3,13 +3,22 @@ import './App.css';
 import RouteWrapper from './routes/RouteWrapper';
 import Navbar from './components/Navbar';
 import { useColorMode } from '@chakra-ui/color-mode';
+import { useLocation } from "react-router-dom";
 
 function App() {
-    const { colorMode } = useColorMode();
+  const { colorMode } = useColorMode();
+  const location = useLocation();
+
+  const hideNavbarRoutes = ["/login", '/sign-up'];
+
+  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
+
   return (
-    <div className={colorMode=='light'? 'light-app' : 'dark-app'}>
-      <Navbar/>
-     <RouteWrapper />
+    <div className={colorMode === 'light' ? 'light-app' : 'dark-app'}>
+      {!shouldHideNavbar && <Navbar />}
+
+      <RouteWrapper />
+
       <Toaster
         position="top-right"
         reverseOrder={false}

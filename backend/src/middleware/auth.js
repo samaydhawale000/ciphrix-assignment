@@ -16,9 +16,9 @@ const userAuthentication = async (request, response, next) => {
                     });
                 } else {
                     request._id = userDetails?._id;
-                    request.name = isUserExist?.name;
-                    request.mobile = isUserExist?.mobile;
-                    request.userType = isUserExist?.userType;
+                    request.name = userDetails?.name;
+                    request.mobile = userDetails?.mobile;
+                    request.userType = userDetails?.userType;
                 }
                 next();
             })

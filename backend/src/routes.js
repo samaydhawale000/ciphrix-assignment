@@ -19,7 +19,7 @@ routes.post("/create-task", userAuthentication, createTask);
 routes.post("/get-tasks", userAuthentication, getTasks);
 routes.post("/update-task", userAuthentication, updateTask);
 routes.get("/get-task-by-id", userAuthentication, getTaskById);
-routes.get("/delete-task", userAuthentication, deleteTask);
+routes.delete("/delete-task", userAuthentication, deleteTask);
 // --------------------------------------
 
 module.exports = routes;

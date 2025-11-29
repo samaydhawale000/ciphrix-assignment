@@ -4,12 +4,14 @@ import ProtectedRoutes from "./protectedRoutes";
 import PageNotFound from "../pages/PageNotFound";
 import Login from "../pages/Login";
 import Dashboard from "../pages/Dashboard";
+import SignUp from "../pages/SignUp";
 
 const RouteWrapper = () => {
   return (
     <Routes>
       <Route path="*" element={<PageNotFound />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/sign-up" element={<SignUp />} />
       <Route
         path="/"
         element={
